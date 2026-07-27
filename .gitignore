@@ -1,0 +1,6 @@
+# Claude Code tooling (skills instaladas no escopo do projeto, não faz parte do site)
+.claude/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
