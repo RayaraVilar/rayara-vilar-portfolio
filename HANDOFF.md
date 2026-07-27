@@ -242,9 +242,11 @@ afeta `index.html`), é só configuração/tooling local. Considere colocar `.cl
 
 ## Repositório Git
 
-Ver o próprio `git log` / `git remote -v` / `gh repo view` para o estado atual (nome do repo,
-descrição, se está público, se tem commits). Este arquivo não duplica esse status porque ele muda
-rápido; só documento aqui decisões que não são óbvias a partir do histórico do Git.
+Repositório: `https://github.com/RayaraVilar/rayara-vilar-portfolio` (público). `.claude/` está no
+`.gitignore` (tooling local, não faz parte do site). Ver o próprio `git log` / `git remote -v` /
+`gh repo view` para o estado atual (descrição, se tem commits novos etc.); este arquivo não
+duplica esse status porque ele muda rápido, só documento aqui decisões que não são óbvias a partir
+do histórico do Git.
 
 ---
 

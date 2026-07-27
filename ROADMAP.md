@@ -47,7 +47,7 @@ Status possíveis: `✅ concluído`, `🔧 em andamento`, `⏳ não iniciado`.
 | 12 | Animações de scroll | ✅ | Sistema `.reveal` global (IntersectionObserver) aplicado nas timelines e nos cards de Projetos; respeita `prefers-reduced-motion` |
 | 13 | Responsividade / acessibilidade | 🔧 | Todas as seções responsivas; falta revisão final de acessibilidade |
 | 14 | README do projeto | ✅ | Ver `README.md` |
-| 15 | Repositório Git | 🔧 | Ver `HANDOFF.md` para status do repositório/commits |
+| 15 | Repositório Git | ✅ | `github.com/RayaraVilar/rayara-vilar-portfolio` (público), commit inicial feito |
 
 ## 3. Informações pendentes
 
