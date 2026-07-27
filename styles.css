@@ -715,30 +715,30 @@ p.subtitle {
 }
 
 .pillar-back:hover {
-  transform: skewY(-8deg) translate(-4rem, 0);
+  transform: skewY(-8deg) translate(-13rem, 0);
   filter: grayscale(0);
   border-color: rgba(75,139,190,0.4);
   z-index: 4;
 }
 
 .pillar-mid:hover {
-  transform: skewY(-8deg) translate(-1.75rem, 2rem);
+  transform: skewY(-8deg) translate(-10.5rem, 2rem);
   filter: grayscale(0);
   border-color: rgba(75,139,190,0.4);
   z-index: 4;
 }
 
 .pillar-front:hover {
-  transform: skewY(-8deg) translate(0.5rem, 4rem);
-  border-color: rgba(75,139,190,0.4);
+  transform: skewY(-8deg) translate(-8.5rem, 4rem);
+  border-color: rgba(255,212,59,0.5);
 }
 
 @media (max-width: 640px) {
   .pillar-mid { transform: skewY(-8deg) translate(1.5rem, 1.5rem); }
   .pillar-front { transform: skewY(-8deg) translate(3rem, 3rem); }
-  .pillar-back:hover { transform: skewY(-8deg) translate(-3rem, 0); }
-  .pillar-mid:hover { transform: skewY(-8deg) translate(-0.5rem, 1.5rem); }
-  .pillar-front:hover { transform: skewY(-8deg) translate(1.5rem, 3rem); }
+  .pillar-back:hover { transform: skewY(-8deg) translate(-9rem, 0); }
+  .pillar-mid:hover { transform: skewY(-8deg) translate(-7rem, 1.5rem); }
+  .pillar-front:hover { transform: skewY(-8deg) translate(-6rem, 3rem); }
 }
 
 .pillar-icon {
@@ -751,6 +751,17 @@ p.subtitle {
   background: rgba(75,139,190,0.15);
   border: 1px solid rgba(75,139,190,0.35);
   color: var(--blue);
+}
+
+/* Card da frente (Desenvolvimento) em amarelo, pra variar do azul e reforçar o foco atual */
+.pillar-front .pillar-icon {
+  background: rgba(255,212,59,0.15);
+  border-color: rgba(255,212,59,0.4);
+  color: var(--yellow);
+}
+
+.pillar-front {
+  border-color: rgba(255,212,59,0.25);
 }
 
 .pillar-icon svg { width: 1.15rem; height: 1.15rem; }
