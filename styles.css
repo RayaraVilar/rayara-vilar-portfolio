@@ -714,24 +714,26 @@ p.subtitle {
   z-index: 3;
 }
 
+/* Ordem de empilhamento SEMPRE fixa (Desenvolvimento > Produto > Comunicação),
+   mesmo em hover — nenhum card deve sobrepor um que esteja na frente dele na
+   ordem base. O hover só desliza o card para a esquerda para revelar o
+   conteúdo, sem trocar o z-index. */
+
 .pillar-back:hover {
   transform: skewY(-8deg) translate(-13rem, 0);
   filter: grayscale(0);
   border-color: rgba(75,139,190,0.4);
-  z-index: 4;
 }
 
 .pillar-mid:hover {
   transform: skewY(-8deg) translate(-10.5rem, 2rem);
   filter: grayscale(0);
   border-color: rgba(75,139,190,0.4);
-  z-index: 4;
 }
 
 .pillar-front:hover {
   transform: skewY(-8deg) translate(-8.5rem, 4rem);
   border-color: rgba(255,212,59,0.5);
-  z-index: 5;
 }
 
 @media (max-width: 640px) {
