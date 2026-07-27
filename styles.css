@@ -665,6 +665,32 @@ p.subtitle {
 
 /* ---------- Além do código (cards empilhados e inclinados) ---------- */
 
+#alem {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 55% 50% at 12% 8%, rgba(255,212,59,0.16), transparent 60%),
+    radial-gradient(ellipse 50% 45% at 88% 95%, rgba(255,212,59,0.1), transparent 60%),
+    var(--bg);
+}
+
+#alem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 75%);
+  pointer-events: none;
+}
+
+#alem .section-inner {
+  position: relative;
+  z-index: 1;
+}
+
 .pillars-stack-wrap {
   display: flex;
   justify-content: center;
@@ -693,7 +719,7 @@ p.subtitle {
   border: 1px solid var(--surface-border);
   background: var(--surface);
   box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-  transition: transform 0.55s cubic-bezier(0.22,1,0.36,1), filter 0.5s ease, border-color 0.3s ease;
+  transition: transform 0.9s cubic-bezier(0.22,1,0.36,1), filter 0.8s ease, border-color 0.5s ease;
   user-select: none;
 }
 
