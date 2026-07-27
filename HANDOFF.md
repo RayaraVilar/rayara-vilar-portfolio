@@ -158,12 +158,23 @@ sempre colorido e os dois de trás em `grayscale`. A Rayara pediu explicitamente
 `position:absolute; inset:0`, cada um com seu próprio `translate()` fixo (back/mid/front) que
 define o cascateamento.
 
-**Interação de hover, ajustada uma vez:** a ideia original do componente de referência era o card
-subir (`translateY` negativo) ao passar o mouse, mas isso fazia o card "atropelar" visualmente o
-card da frente. A Rayara pediu para deslizar **para a esquerda** em vez de subir, mantendo o
-`skewY` (a perspectiva). Hoje cada `.pillar-*:hover` reduz o `translateX` (em vez de reduzir o
-`translateY`) — ver `.pillar-back:hover` / `.pillar-mid:hover` / `.pillar-front:hover` em
-`styles.css`. Se mexer nesse hover de novo, mantenha o slide horizontal, não volte para vertical.
+**Interação de hover, ajustada duas vezes:** a ideia original do componente de referência era o
+card subir (`translateY` negativo) ao passar o mouse, mas isso fazia o card "atropelar"
+visualmente o card da frente. A Rayara pediu para deslizar **para a esquerda** em vez de subir
+(mantendo o `skewY`), com um deslocamento bem grande (quase saindo do "baralho"). Cada
+`.pillar-*:hover` reduz bastante o `translateX` — ver `.pillar-back:hover` / `.pillar-mid:hover` /
+`.pillar-front:hover` em `styles.css`.
+
+**Ordem de empilhamento é SEMPRE fixa, mesmo em hover**: Desenvolvimento (z-index 3, sempre na
+frente) > Produto (z-index 2) > Comunicação (z-index 1, sempre atrás). Uma primeira tentativa
+também subia o `z-index` do card em hover pra ele aparecer acima de tudo, mas a Rayara não queria
+isso — o card hover deve deslizar e ficar em evidência, mas **sem nunca sobrepor um card que já
+está na frente dele na ordem base**. Por isso os `:hover` de `.pillar-back` e `.pillar-mid` NÃO têm
+`z-index` (só a versão anterior tinha, foi removido). Não reintroduza `z-index` nesses hovers.
+
+O card da frente (Desenvolvimento) também ganhou acento amarelo (`--yellow`) no ícone e na borda,
+em vez do azul padrão, pra destacar que é o foco atual dela — os outros dois continuam com acento
+azul.
 
 ### 10. Contato (`#contato`) + Footer
 
